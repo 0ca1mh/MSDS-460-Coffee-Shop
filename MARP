@@ -1,18 +1,26 @@
 ---
+marp: true
 theme: gaia
 ---
 
-# Slide 1 Title
-Coffee Shop Problem Expanded
+# Discrete Event Simulation - Expanding on the Coffee Shop
+
+Discrete Event Simulation - Expanding on the Coffee Shop
+
+Julia O'Keeffe, Paul Yaginuma, Graham Lovell, Su Hyun Byeon, & Jacob Zott
 
 ---
 
-# Slide 2 Title
-Heres the content for the second slide.
+# Discrete Event Simulation
+
+Analyze the process of customers visiting a coffee shop by conducting discrete event simulations (DES)
+
+![Coffee Shop Image](images/Expanded%20Coffee%20Shop.jpg)
 
 ---
 
-# Slide 3 Title
-- Bullet 1
-- Bullet 2
-- Bullet 3
+# Variables
+
+- Percent Rushed
+- Number of Baristas
+- Items Ordered
