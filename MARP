@@ -1,27 +1,32 @@
-name: Deploy Marp site to Pages
+---
+marp: true
+theme: gaia
+---
 
-on:
-  push:
-    branches: ["main"]
-  workflow_dispatch:
+# Discrete Event Simulation - Expanding on the Coffee Shop
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+Julia O'Keeffe, Paul Yaginuma, Graham Lovell, Su Hyun Byeon, & Jacob Zott
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Marp Build
-        uses: docker://marpteam/marp-cli:v3.2.0
-        with:
-          args: slides.md -o index.html --html
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: '.'
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+---
+
+# Discrete Event Simulation
+
+Analyze the process of customers visiting a coffee shop by conducting discrete event simulations (DES)
+
+![Coffee Shop Image](images/Expanded%20Coffee%20Shop.jpg)
+
+---
+
+## Problem and Variables
+
+- Percent Rushed
+- Number of Baristas
+- Items Ordered
+
+## Model Set Up
+
+## Results
+
+## Recommendations
+
+## Challenges
