@@ -24,3 +24,32 @@ Analyze the process of customers visiting a coffee shop by conducting discrete e
 - Percent Rushed
 - Number of Baristas
 - Items Ordered
+
+
+name: Deploy Marp site to Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Marp Build
+        uses: docker://marpteam/marp-cli:v1.7.0
+        with:
+          args: PITCHME.md -o build/index.html --html
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: 'build'
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
